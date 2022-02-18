@@ -3,7 +3,7 @@ import Message from "./Message"
 function MessagesList ({messagesData}){
     return (
       <div className="messages-list">
-          {messagesData.map(message => <Message message={message} />)}
+          {messagesData.map((message, index) => <Message key={index} message={message} />)}
       </div>
     )
 }

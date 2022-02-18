@@ -29,9 +29,9 @@ function App() {
       <h1>React chat</h1>
       <MessagesList messagesData={messagesData} />
       <FormChat 
-        messagesData={messagesData} 
         setMessagesData={setMessagesData} 
-        />
+        messagesData={messagesData}
+      />
     </div>
   )
 }

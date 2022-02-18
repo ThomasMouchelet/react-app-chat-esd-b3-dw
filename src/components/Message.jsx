@@ -3,6 +3,7 @@ function Message ({message}){
         <div className="message">
             <strong>{message.pseudo} :</strong>
             <span>{message.message}</span>
+            <button>DELETE</button>
         </div>
     )
 }
