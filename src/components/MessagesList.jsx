@@ -1,9 +1,16 @@
 import Message from "./Message"
 
-function MessagesList ({messagesData, deleteMessage}){
+function MessagesList ({messagesData, setMessagesData}){
     return (
       <div className="messages-list">
-          {messagesData.map((message, index) => <Message key={index} deleteMessage={deleteMessage} message={message} index={index} />)}
+          {messagesData.map((message, index) => 
+            <Message 
+              key={index} 
+              setMessagesData={setMessagesData} 
+              messagesData={messagesData}
+              message={message}
+              index={index} />
+          )}
       </div>
     )
 }
