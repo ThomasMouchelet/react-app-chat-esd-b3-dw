@@ -24,11 +24,18 @@ const messagesFixtures = [
 function App() {
   const [messagesData, setMessagesData] = useState(messagesFixtures)
 
+  const deleteMessage = (index) => {
+    messagesData.splice(index, 1)
+    console.log(messagesData)
+
+    setMessagesData(messagesData)
+  }
+
   return (
     <div>
       <h1>React chat</h1>
-      <MessagesList messagesData={messagesData} />
-      <FormChat 
+      <MessagesList deleteMessage={deleteMessage} messagesData={messagesData} />
+      <FormChat
         setMessagesData={setMessagesData} 
         messagesData={messagesData}
       />

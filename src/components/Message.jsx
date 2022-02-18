@@ -1,9 +1,10 @@
-function Message ({message}){
+function Message ({message, deleteMessage, index}){
+
     return (
         <div className="message">
             <strong>{message.pseudo} :</strong>
             <span>{message.message}</span>
-            <button>DELETE</button>
+            <button onClick={() => deleteMessage(index)}>DELETE</button>
         </div>
     )
 }
